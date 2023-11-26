@@ -27,6 +27,7 @@
       <li class="list-group-item">Item 2</li>
       <li class="list-group-item">Item 3</li>
       <li class="list-group-item">Item 4</li>
+      <li class="list-group-item">Item 5</li>
     </ul>
    </div>
   </div>
@@ -51,6 +52,21 @@
         listItems[i].style.color = "black";
         listItems[i].style.fontWeight = "bold";
       }
+
+      var newItem = document.createElement("li");
+      newItem.textContent = "New Item";
+
+      document.getElementById("items").appendChild(newItem);
+
+      var newItemsByClassName = document.getElementsByClassName("list-group-item");
+      newItemsByClassName[newItemsByClassName.length - 1].style.color = "blue";
+
+      // Edit the new li element using getElementsByTagName
+      var newItemsByTagName = document.getElementsByTagName("li");
+      newItemsByTagName[newItemsByTagName.length - 1].style.fontWeight = "bold";
+
+
+
     });
   </script>
 </body>
