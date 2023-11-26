@@ -6,16 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   <title>Item Lister</title>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // Get the "Add Items" heading element
-      var addItemsHeading = document.querySelector(".title");
-
-      // Apply styles using JavaScript
-      addItemsHeading.style.color = "green";
-      addItemsHeading.style.fontWeight = "bold";
-    });
-  </script>
+ 
 </head>
 <body>
   <header id="main-header" class="bg-success text-white p-4 mb-3">
@@ -39,5 +30,28 @@
     </ul>
    </div>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get the "Add Items" heading element
+      var addItemsHeading = document.querySelector(".title");
+  
+      // Apply styles to the heading
+      addItemsHeading.style.color = "green";
+      addItemsHeading.style.fontWeight = "bold";
+  
+      // Get the third item and apply a background color
+      var thirdItem = document.getElementById("items").getElementsByTagName("li")[2];
+      thirdItem.style.backgroundColor = "green";
+  
+      // Get all list items in the "items" list
+      var listItems = document.getElementById("items").getElementsByTagName("li");
+  
+      // Loop through each list item and apply styles
+      for (var i = 0; i < listItems.length; i++) {
+        listItems[i].style.color = "black";
+        listItems[i].style.fontWeight = "bold";
+      }
+    });
+  </script>
 </body>
 </html>
